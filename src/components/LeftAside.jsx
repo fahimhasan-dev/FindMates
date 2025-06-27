@@ -12,7 +12,7 @@ import { NavLink } from "react-router";
 
 const LeftAside = () => {
   return (
-    <div className="w-[70%] md:w-auto bg-black card-hover-bg  h-full  border-r border-white ">
+    <div className="w-[70%] md:w-auto bg-black card-hover-bg  h-full  border-r-3 cardBoarder  ">
       <div className="navbar navbar-bg   shadow-xl/20 shadow-sm">
         <div className="flex mx-auto justify-center items-center space-x-1">
           <div className="avatar">

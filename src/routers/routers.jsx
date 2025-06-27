@@ -15,6 +15,7 @@ import PostDetails from "../components/PostDetails";
 import MyRoommatePosts from "../Pages/MyRoommatePosts";
 import UpdatePostForm from "../Pages/UpdatePostForm";
 import Dashboard from "../layouts/Dashboard";
+import DashboardHome from "../Pages/DashboardHome";
 
 
 // import PostCardForBL from "../components/PostCardForBL";
@@ -99,7 +100,13 @@ export const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    Component:Dashboard,
+    Component: Dashboard,
+    children: [
+      {
+        index: true,
+        Component:DashboardHome,
+      }
+    ]
 },
   {
     path: "/*",

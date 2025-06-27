@@ -1,6 +1,8 @@
 import React from "react";
 import LeftAside from "../components/LeftAside";
-import DashBoardNavbar from "../components/alf/DashBoardNavbar";
+import DashBoardNavbar from "../components/DashBoardNavbar";
+import { Outlet } from "react-router";
+import Footer from "../components/Footer";
 
 const Dashboard = () => {
   return (
@@ -15,13 +17,19 @@ const Dashboard = () => {
         </aside>
         <aside className="xl:col-span-5 w-full col-span-6 ">
           <header>
-            <nav><DashBoardNavbar> </DashBoardNavbar></nav>
+            <nav>
+              <DashBoardNavbar> </DashBoardNavbar>
+            </nav>
           </header>
-          <main>{/* <Outlet></Outlet> */}</main>
+          <main>
+            <Outlet></Outlet>
+          </main>
         </aside>
       </section>
 
-      <footer>{/* <Footer></Footer> */}</footer>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
   );
 };

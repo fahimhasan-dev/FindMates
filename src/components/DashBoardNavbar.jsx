@@ -1,9 +1,9 @@
 import React, { use, useEffect, useState } from "react";
 import { Link } from "react-router";
-import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../context/AuthContext";
 import Swal from "sweetalert2";
 import { LuAlignLeft } from "react-icons/lu";
-import LeftAside from "../LeftAside";
+import LeftAside from "./LeftAside";
 import { MdOutlineLightMode, MdOutlineNightlight } from "react-icons/md";
 
 const DashBoardNavbar = () => {
@@ -50,7 +50,7 @@ const DashBoardNavbar = () => {
   }, [theme]);
 
   return (
-    <div className="navbar navbar-bg flex justify-between shadow-xl/20 shadow-sm">
+    <div className="navbar navbar-bg cardBoarder border-b-3 shadow-2xl flex justify-between shadow-xl/20 ">
       <div className="navbar-start">
         <div className="xl:hidden">
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
