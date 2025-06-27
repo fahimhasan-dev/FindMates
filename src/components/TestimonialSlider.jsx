@@ -41,7 +41,7 @@ const testimonials = [
 const TestimonialSlider = () => {
   
   return (
-    <div className="w-full py-16 mx-auto overflow-hidden">
+    <div className="w-full  py-16 mx-auto overflow-hidden">
       <Fade duration={300} direction="up" triggerOnce>
       <h1 className=" text-center mb-6 mt-25 font-semibold text-2xl md:text-5xl text-blue-400">What our customers are sayings</h1></Fade>
       <p className="text-sm text-center mb-20 max-w-[600px] mx-auto text-gray-500">Enhance posture, mobility, and well-being effortlessly with Posture Pro. Achieve proper alignment, reduce pain, and strengthen your body with ease!</p>
@@ -58,9 +58,9 @@ const TestimonialSlider = () => {
         >
           {testimonials.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-xl shadow-md p-6  h-full ">
+              <div className="bg-[#213049] rounded-xl shadow-md p-6  h-full ">
                 <div><img src="https://i.ibb.co/35g0cqhb/review-Quote.png" alt="" /></div>
-                <p className="text-gray-700 text-sm border-dashed border-b-2 border-gray-700 pb-3 ">{item.message}</p>
+                <p className=" text-sm border-dashed border-b-2 text-gray-300 pb-3 ">{item.message}</p>
                 <div className="flex items-center justify-center mt-4 gap-3">
                   <img
                     src={item.image}
@@ -68,10 +68,10 @@ const TestimonialSlider = () => {
                     className="w-10 h-10 rounded-full"
                   />
                   <div className="text-left">
-                    <h4 className="text-md font-bold text-gray-800">
+                    <h4 className="text-md font-bold text-gray-400">
                       {item.name}
                     </h4>
-                    <p className="text-xs text-gray-500">{item.title}</p>
+                    <p className="text-xs text-gray-300">{item.title}</p>
                   </div>
                 </div>
               </div>

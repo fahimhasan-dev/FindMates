@@ -57,10 +57,12 @@ const UpdatePostForm = () => {
   };
   return (
     <div>
-      <div className="my-10 mx-auto md:w-[95%] xl:w-[90%] 2xl-[82%]">
+
+      <div className="my-10 mx-auto col-span-3 mt-20  w-[50%] ">
+
         <div className=" pt-4  ">
           <div className="md:p-12 bg-[#f8fafb] border montserrat border-[#dddddd] shadow-sm md:rounded-t-xl text-center space-y-4">
-            <h1 className="lg:text-6xl text-[#0f5e87] md:text-3xl   pt-4 md:pt-0  text-2xl font-bold">
+            <h1 className="lg:text-3xl text-[#0f5e87] md:text-3xl   pt-4 md:pt-0  text-2xl font-bold">
               Update Your Find Roommate Post{" "}
             </h1>
           </div>
@@ -68,7 +70,7 @@ const UpdatePostForm = () => {
             onSubmit={handlePostUpdate}
             className=" shadow-sm bg-[#f8fafb] border border-[#dddddd] rounded-b-xl "
           >
-            <div className="grid grid-cols-1  py-12  md:grid-cols-2 lg:px-24 md:px-8 gap-6 mx-auto w-full">
+            <div className="grid grid-cols-1  py-12  md:grid-cols-2 lg:px-24  gap-6 mx-auto w-full">
               <fieldset className="fieldset p-2">
                 <label className="label  montserrat text-xl">User Name</label>
                 <input

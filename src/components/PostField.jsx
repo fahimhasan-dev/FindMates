@@ -34,13 +34,13 @@ const PostField = () => {
       });
   };
   return (
-    <div className="my-10 mx-auto md:w-[95%] xl:w-[90%] 2xl-[82%]">
+    <div className="my-10 mx-auto mt-20 w-[60%]">
       <div className=" pt-4  ">
         <div className="md:p-12 bg-[#f8fafb] border montserrat border-[#dddddd] shadow-sm md:rounded-t-xl text-center space-y-4">
-          <h1 className="lg:text-6xl text-[#0f5e87] md:text-3xl   pt-4 md:pt-0  text-2xl font-bold">
+          <h1 className="lg:text-3xl text-[#0f5e87] md:text-2xl   pt-4 md:pt-0  text-2xl font-bold">
             Fill the form for easy to Find Roommate{" "}
           </h1>
-          <p className=" w-full text-sm  mx-auto montserrat text-center px-3 md:px-5  md:text-xl pb-6 md:pb-0">
+          <p className="  text-sm  mx-auto montserrat text-center px-3 md:px-5  w-[70%] pb-6 md:pb-0">
             Looking for someone to share your space? Just fill out a quick form
             and get matched with compatible roommates. It’s simple, fast, and
             designed to help you live better together.

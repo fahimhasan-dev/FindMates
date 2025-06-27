@@ -8,7 +8,7 @@ const MyRoommatePosts = () => {
   const { user } = useContext(AuthContext);
   const tableData = useLoaderData();
 
-  // ✅ ফিল্টার করে যেসব পোস্ট ইউজারের, সব বের করো
+ 
   const userPosts = tableData.filter((data) => data.email === user.email);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const MyRoommatePosts = () => {
   return (
     <div>
       {noData ? (
-        <div className="flex justify-center text-center mx-auto min-h-[calc(100vh-300px)]  flex-col  ">
+        <div className="flex mt-[80px]  justify-center text-center mx-auto min-h-[calc(100vh-300px)]  flex-col  ">
           <div className="flex justify-center items-center">
             <img
               className="w-[20%]"
@@ -42,7 +42,7 @@ const MyRoommatePosts = () => {
           </Link>
         </div>
       ) : (
-        <div className="p-4 min-h-screen">
+        <div className="p-4 mt-[80px]  min-h-screen">
           <h2 className="text-xl font-bold mb-4 text-[#3d92e7ef]">
             My Roommate Posts
           </h2>

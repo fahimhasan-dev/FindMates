@@ -14,6 +14,9 @@ import Loading from "../components/Loading";
 import PostDetails from "../components/PostDetails";
 import MyRoommatePosts from "../Pages/MyRoommatePosts";
 import UpdatePostForm from "../Pages/UpdatePostForm";
+import Dashboard from "../layouts/Dashboard";
+
+
 // import PostCardForBL from "../components/PostCardForBL";
 
 export const router = createBrowserRouter([
@@ -40,13 +43,16 @@ export const router = createBrowserRouter([
       // },
       {
         path: "/browseListing",
-        loader:()=> fetch("https://assignment-10-server-side-rho-six.vercel.app/parsonsData"),
+         loader:async () => {
+          const res = await fetch("https://assignment-10-server-side-rho-six.vercel.app/parsonsData");
+          return res.json();
+         } ,
         Component: BrowseListing,
          hydrateFallbackElement: <Loading></Loading>,
       },
       {
         path: "/myRoommatePosts",
-         loader:()=> fetch("https://assignment-10-server-side-rho-six.vercel.app/parsonsData"),
+         loader:  ()=> fetch("https://assignment-10-server-side-rho-six.vercel.app/parsonsData"),
           element: (
           <PrivateRout>
             <MyRoommatePosts></MyRoommatePosts>
@@ -76,6 +82,7 @@ export const router = createBrowserRouter([
       },
     ],
   },
+
   {
     path: "auth",
     Component: AuthLayout,
@@ -90,7 +97,10 @@ export const router = createBrowserRouter([
       },
     ],
   },
-
+  {
+    path: "/dashboard",
+    Component:Dashboard,
+},
   {
     path: "/*",
     element: <ErrorPage></ErrorPage>,

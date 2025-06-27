@@ -135,6 +135,16 @@ console.log(user)
                 MyListings
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/dashboard"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 border-b-2 border-blue-600" : ""
+                }
+              >
+               Dashboard
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div className="navbar-end md:mr-3   space-x-0.5 md:space-x-2">

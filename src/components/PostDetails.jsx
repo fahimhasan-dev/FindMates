@@ -6,6 +6,8 @@ import { AuthContext } from "../context/AuthContext";
 import { AiFillLike } from "react-icons/ai";
 import Swal from "sweetalert2";
 
+
+
 const PostDetails = () => {
   const [showContact, setShowContact] = useState(false);
   const data = useLoaderData();
@@ -65,7 +67,8 @@ const PostDetails = () => {
 
   return (
     <div className="lg:w-[80%] sm:w-[95%] my-20 mx-auto">
-      <div className="flex flex-col max-w-full h-full  p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
+      <div className="grid grid-cols-4">
+  <div className="flex col-span-3 flex-col max-w-full h-full  p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
         <div className="flex space-x-4">
           <img
             alt=""
@@ -208,6 +211,8 @@ const PostDetails = () => {
           </div>
         </div>
       </div>
+      </div>
+    
     </div>
   );
 };
