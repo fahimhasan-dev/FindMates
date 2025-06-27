@@ -1,39 +1,9 @@
-// import { logoIconsList } from "../../public";
 
-
-// const LogoIcon = ({ icon }) => {
-//   return (
-//     <div className="flex-none flex-center marquee-item">
-//       <img src={`${icon.imgPath}`} alt={`{icon.name}`} />
-//     </div>
-//   )
-// };
-
-// const LogoShowcase = () => (
-//   <div className="md:my-20 my-10 relative">
-//     <div className="gradient-edge" />
-//     <div className="gradient-edge" />
-
-//     <div className="marquee h-52">
-//       <div className="marquee-box md:gap-12 gap-5">
-//         {logoIconsList.map((icon, index) => (
-//           <LogoIcon key={index} icon={icon} />
-//         ))}
-
-//         {logoIconsList.map((icon, index) => (
-//           <LogoIcon key={index} icon={icon} />
-//         ))}
-//       </div>
-//     </div>
-//   </div>
-// );
-
-// export default LogoShowcase;
 import React from 'react';
 import TitleHeader from './TitleHeader';
 import Marquee from 'react-fast-marquee';
 import { Fade } from 'react-awesome-reveal';
-import { Typewriter } from 'react-simple-typewriter';
+
 
 const LogoShowcase = () => {
   return (
@@ -42,16 +12,8 @@ const LogoShowcase = () => {
         
        
 <Fade direction="up" triggerOnce duration={1500}>
-          <h1 className="font-semibold text-[#3d92e7] md:text-5xl text-3xl text-center">Trusted by the world’s best .
-                <Typewriter
-                              words={['Hostinger',  'vercel', '!']}
-                              loop={true}
-                              cursor
-                              cursorStyle='|'
-                              typeSpeed={70}
-                              deleteSpeed={50}
-                              delaySpeed={1000}
-                            />
+          <h1 className="md:text-5xl text-3xl heading-text">Trusted by the world’s best company .
+               
    
   </h1>
 </Fade>

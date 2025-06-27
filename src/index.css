@@ -18,7 +18,20 @@ body {
 
   font-style: normal;
 }
+.swiper-slide {
+  opacity: 0.3;
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out;
 
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+  transform: scale(1.05);
+  z-index: 10;
+
+
+}
 /* for active Route */
 .active {
   color: #3d92e7;
@@ -36,12 +49,22 @@ body.light {
   color: #000000;
 }
 
-button {
+/* button {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-}
+} */
+ .heading-text{
+  margin-top: 35px;
+  margin-bottom: 30px;
+  color: #3d92e7;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+
+
+ }
 
 /* google font */
 .rancho-regular {

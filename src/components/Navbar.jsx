@@ -10,7 +10,7 @@ const Navbar = () => {
   const handleLogOut = () => {
     userSignOut();
   };
-
+console.log(user)
   // Theme Functionality
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar bg-base-200  flex justify-between shadow-xl/20 shadow-sm">
+      <div className="navbar fixed top-0 left-0 right-0 bg-white shadow-md z-50  flex justify-between shadow-xl/20 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -137,11 +137,11 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end md:mr-3 pb-4  space-x-0.5 md:space-x-2">
+        <div className="navbar-end md:mr-3   space-x-0.5 md:space-x-2">
           <button onClick={toggleTheme}>
             {theme === "light" ? (
               <svg
-                className="swap-off h-5 w-5 lg:h-8 lg:w-8  -ml-8 lg:mr-0 md:h-8 md:w-8 md:mr-8 xl:w-12 xl:h-12 xl:mr-5 fill-current"
+                className="swap-off h-5 w-5 lg:h-8 lg:w-8  xl:w-8 xl:h-8 pt-1  -ml-8  lg:mr-0 md:h-8 md:w-8 md:mr-7  fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -149,7 +149,7 @@ const Navbar = () => {
               </svg>
             ) : (
               <svg
-                className="swap-on dark:text-black h-5 w-5 -ml-8 md:h-10 lg:h-8 lg:w-8 xl:w-12 xl:h-12 xl:mr-5 md:w-10 fill-current"
+                className="swap-on dark:text-black h-5 w-5 flex  -ml-8 md:h-10 lg:h-8 lg:w-8 md:w-10 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -159,13 +159,11 @@ const Navbar = () => {
           </button>
           {user ? (
             <div>
-              <div className="relative group inline-block avatar space-x-1  avatar-online">
-                <div className="sm:w-10 w-10 xl:w-16 xl:h-16 -ml-8 md:w-14 md:h-14 md:ml-0 lg:w-12 lg:-ml-8 lg:h-12 rounded-full">
-                  <img
-                    src={user.photoURL}
-                    alt="Profile Photo"
-                    className="w-10 h-10 rounded-full"
-                  />
+              <div className="relative group inline-block avatar space-x-1 ">
+                <div className="avatar avatar-online">
+                  <div className="w-15 rounded-full">
+                    <img src={user.photoURL} />
+                  </div>
                 </div>
 
                 <h1
@@ -179,13 +177,13 @@ const Navbar = () => {
               </div>
               <button
                 onClick={handleLogOut}
-                className=" md:font-semibold md:py-6  text-sm font-light rounded-xl md:px-7 py-1 px-3  md:h-15 md:w-25 border bg-[#3d92e7] text-white  hover:bg-[#3d92e7ef]"
+                className=" md:font-semibold md:py-5  text-sm  rounded-xl  px-7 border bg-[#3d92e7] text-white  hover:bg-[#3d92e7ef]"
               >
                 LogOut
               </button>
             </div>
           ) : (
-            <div className=" mt-5">
+            <div className=" ">
               <Link
                 to="/auth/login"
                 className=" md:font-bold md:py-5 md:text-xl -ml-10   font-light  py-1 px-3 text-sm  hover:text-[#3d92e7ef]"

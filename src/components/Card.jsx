@@ -36,7 +36,7 @@ const Card = ({ index, card }) => {
     <div
       ref={(el) => (cardRefs.current[index] = el)}
       onMouseMove={handleMouseMove(index)}
-      className="card card-border timeline-card   rounded-xl p-4 md:p-10 mb-5 break-inside-avoid-column"
+      className="card card-border timeline-card  rounded-xl p-4 md:p-10 mb-5 break-inside-avoid-column"
     >
       <div className="flex justify-between p-2">
         <div className="avatar">

@@ -6,6 +6,7 @@ import PostCard from "../components/PostCard";
 import AboutOurWebSite from "../components/AboutOurWebSite";
 import Services from "../components/Services";
 import LogoShowcase from "../components/LogoShowcase";
+import TestimonialSlider from "../components/TestimonialSlider";
 
 const Home = () => {
   return (
@@ -22,10 +23,11 @@ const Home = () => {
           <PostCard></PostCard>
         </Suspense>
         <AboutOurWebSite></AboutOurWebSite>
+
         <div>
           <LogoShowcase></LogoShowcase>
         </div>
-
+        <TestimonialSlider></TestimonialSlider>
         <Services></Services>
       </main>
     </div>

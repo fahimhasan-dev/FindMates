@@ -7,6 +7,7 @@ const AboutOurWebSite = () => {
     <div className="px-4 md:px-10 lg:px-20 mt-24">
       {/* Title Section */}
       <div className="text-center mb-12">
+        <Fade direction="up" triggerOnce duration={1500}>
         <h1 className="font-semibold text-3xl md:text-5xl text-blue-600 dark:text-blue-400">
           How it works?{" "}
           <Typewriter
@@ -18,7 +19,7 @@ const AboutOurWebSite = () => {
             deleteSpeed={50}
             delaySpeed={1000}
           />
-        </h1>
+        </h1></Fade>
       </div>
 
       {/* Content Box */}
