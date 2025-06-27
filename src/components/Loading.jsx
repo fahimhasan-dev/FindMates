@@ -1,12 +1,14 @@
+import Lottie from "lottie-react";
 import React from "react";
-
+import lottieLoading from "../../public/loading.json";
 const Loading = () => {
   return (
     <div>
       <div className="flex justify-center min-h-screen items-center">
-        {/* <span className="loading loading-bars loading-xl"></span> */}
-        {/* <span className="loading loading-spinner loading-xl text-accent"></span> */}
-        <span className="loading loading-dots loading-xl text-[green]" ></span>
+        <Lottie
+          animationData={lottieLoading}
+          style={{ width: "150px", height: "full" }}
+        ></Lottie>
       </div>
     </div>
   );

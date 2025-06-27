@@ -66,8 +66,8 @@ const PostDetails = () => {
   };
 
   return (
-    <div className="lg:w-[80%] sm:w-[95%] my-20 mx-auto">
-      <div className="grid grid-cols-4">
+    <div className="lg:w-[60%] sm:w-[70%] my-20 mx-auto">
+      
   <div className="flex col-span-3 flex-col max-w-full h-full  p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
         <div className="flex space-x-4">
           <img
@@ -213,7 +213,7 @@ const PostDetails = () => {
       </div>
       </div>
     
-    </div>
+    
   );
 };
 

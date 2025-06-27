@@ -16,6 +16,8 @@ import MyRoommatePosts from "../Pages/MyRoommatePosts";
 import UpdatePostForm from "../Pages/UpdatePostForm";
 import Dashboard from "../layouts/Dashboard";
 import DashboardHome from "../Pages/DashboardHome";
+import MyProfile from "../components/MyProfile";
+import AboutUsPage from "../components/AboutUsPage";
 
 
 // import PostCardForBL from "../components/PostCardForBL";
@@ -38,10 +40,7 @@ export const router = createBrowserRouter([
           </PrivateRout>
         ),
       },
-      // {
-      //   path: "postCardBL",
-      //   Component:PostCardForBL,
-      // },
+    
       {
         path: "/browseListing",
          loader:async () => {
@@ -81,6 +80,10 @@ export const router = createBrowserRouter([
           </PrivateRout>
         ),
       },
+      {
+        path: '/aboutUs',
+        Component:AboutUsPage,
+      }
     ],
   },
 
@@ -96,16 +99,44 @@ export const router = createBrowserRouter([
         path: "/auth/register",
         Component: Register,
       },
+
     ],
   },
   {
     path: "/dashboard",
-    Component: Dashboard,
+   
+  element:<PrivateRout><Dashboard></Dashboard></PrivateRout>,
     children: [
       {
         index: true,
         Component:DashboardHome,
+      },
+      {
+        path: '/dashboard/addPost',
+          element: (
+          <PrivateRout>
+            <AddToFindRoommate></AddToFindRoommate>
+          </PrivateRout>
+        ),
+      },
+         {
+        path: "/dashboard/MyPosts",
+         loader:  ()=> fetch("https://assignment-10-server-side-rho-six.vercel.app/parsonsData"),
+          element: (
+          <PrivateRout>
+            <MyRoommatePosts></MyRoommatePosts>
+          </PrivateRout>
+        ),
+         hydrateFallbackElement: <Loading></Loading>,
+      },
+      {
+        path: '/dashboard/MyProfile',
+        element: <PrivateRout>
+          <MyProfile></MyProfile>
+        </PrivateRout>
       }
+      
+
     ]
 },
   {

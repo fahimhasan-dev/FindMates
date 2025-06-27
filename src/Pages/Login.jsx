@@ -73,7 +73,7 @@ const Login = () => {
       });
   };
   return (
-    <div className="items-center my-4 justify-center  min-h-[calc(100vh-300px)] flex  ">
+    <div className="items-center mt-20 my-4 justify-center  min-h-[calc(100vh-300px)] flex  ">
       <Helmet>
         <title>Login</title>
       </Helmet>

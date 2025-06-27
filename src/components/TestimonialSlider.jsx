@@ -36,6 +36,27 @@ const testimonials = [
       "A posture corrector works by providing support and gentle alignment to your shoulders, back, and spine, encouraging you to maintain proper posture throughout the day.",
     image: "https://i.ibb.co/CpxtbySj/1630109696144.jpg",
   },
+    {
+    name: "Nasir Uddin",
+    title: "CEO",
+    message:
+      "A posture corrector works by providing support and gentle alignment to your shoulders, back, and spine, encouraging you to maintain proper posture throughout the day.",
+    image: "https://i.ibb.co/5hY8SsDy/professional-profile-pictures-2880-x-1920-7jvygpai7v9zkg2j.jpg",
+  },
+    {
+    name: "Awlad Hossin",
+    title: "Senior Product Designer",
+    message:
+      "A posture corrector works by providing support and gentle alignment to your shoulders, back, and spine, encouraging you to maintain proper posture throughout the day.",
+    image: "https://i.ibb.co/HDtWqBSd/360-F-431647519-usrb-Q8-Z983h-TYe8zg-A7t1-XVc5f-Etqcpa.jpg",
+  },
+    {
+    name: "Awlad Hossin",
+    title: "Senior Product Designer",
+    message:
+      "A posture corrector works by providing support and gentle alignment to your shoulders, back, and spine, encouraging you to maintain proper posture throughout the day.",
+    image: "https://i.ibb.co/HDtWqBSd/360-F-431647519-usrb-Q8-Z983h-TYe8zg-A7t1-XVc5f-Etqcpa.jpg",
+  },
 ];
 
 const TestimonialSlider = () => {
@@ -45,9 +66,9 @@ const TestimonialSlider = () => {
       <Fade duration={300} direction="up" triggerOnce>
       <h1 className=" text-center mb-6 mt-25 font-semibold text-2xl md:text-5xl text-blue-400">What our customers are sayings</h1></Fade>
       <p className="text-sm text-center mb-20 max-w-[600px] mx-auto text-gray-500">Enhance posture, mobility, and well-being effortlessly with Posture Pro. Achieve proper alignment, reduce pain, and strengthen your body with ease!</p>
-      <div className="max-w-5xl mx-auto px-4 ">
+      <div className="max-w-[88%] mx-auto px-4 ">
         <Swiper
-          slidesPerView={3}
+          slidesPerView={5}
           centeredSlides={true}
           loop={true}
           spaceBetween={30}

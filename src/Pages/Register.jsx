@@ -74,7 +74,7 @@ const Register = () => {
       <Helmet>
         <title>Register</title>
       </Helmet>
-      <div className="flex flex-col  p-6 rounded-md sm:p-10 bg-white max-w-xl  mx-auto min-h-[calc(100vh-200px)] my-4 shadow-xl/30  shadow-xl dark:bg-gray-50 dark:text-gray-800">
+      <div className="flex flex-col mt-20  p-6 rounded-md sm:p-10 bg-white max-w-xl  mx-auto min-h-[calc(100vh-200px)] my-4 shadow-xl/30  shadow-xl dark:bg-gray-50 dark:text-gray-800">
         <div className="mb-8 ">
           <h1 className="md:text-4xl text-2xl md:font-bold font-bold w-full md:p-5 p-2 ">
             Welcome to FindMates 👋
@@ -166,7 +166,7 @@ const Register = () => {
                   onClick={() => {
                     setShow(!show);
                   }}
-                  className=" btn-xs absolute -top-5 z-200 right-7 "
+                  className=" btn-xs absolute  z-200 right-7 "
                 >
                   {show ? <FaEyeSlash /> : <FaEye></FaEye>}
                 </button>{" "}

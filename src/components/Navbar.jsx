@@ -10,7 +10,7 @@ const Navbar = () => {
   const handleLogOut = () => {
     userSignOut();
   };
-console.log(user)
+  console.log(user);
   // Theme Functionality
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -61,11 +61,12 @@ console.log(user)
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li>
-                <NavLink to="/findRoommate">Add to Find Roommate</NavLink>
-              </li>
+
               <li>
                 <NavLink to="/browseListing">BrowseListing</NavLink>
+              </li>
+              <li>
+                <NavLink to="/findRoommate">Add to Find Roommate</NavLink>
               </li>
 
               <li>
@@ -90,7 +91,8 @@ console.log(user)
             </div>
           </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        {
+          user ?( <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal dark:text-black  font-bold text-xl px-1">
             <li>
               <NavLink
@@ -105,12 +107,65 @@ console.log(user)
 
             <li>
               <NavLink
+                to="/browseListing"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 border-b-2 border-blue-600" : ""
+                }
+              >
+                All Post
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/findRoommate"
                 className={({ isActive }) =>
                   isActive ? "text-blue-600 border-b-2 border-blue-600" : ""
                 }
               >
-                Add to Find Roommate
+                Add Post
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/myRoommatePosts"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 border-b-2 border-blue-600" : ""
+                }
+              >
+                My Post
+              </NavLink>
+              </li>
+               <li>
+              <NavLink
+                to="/aboutUs"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 border-b-2 border-blue-600" : ""
+                }
+              >
+                About Us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/dashboard"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 border-b-2 border-blue-600" : ""
+                }
+              >
+                Dashboard
+              </NavLink>
+            </li>
+          </ul>
+        </div>):( <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal dark:text-black  font-bold text-xl px-1">
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 border-b-2 border-blue-600" : ""
+                }
+              >
+                Home
               </NavLink>
             </li>
 
@@ -124,29 +179,21 @@ console.log(user)
                 BrowseListing
               </NavLink>
             </li>
-
             <li>
               <NavLink
-                to="/myRoommatePosts"
+                to="/aboutUs"
                 className={({ isActive }) =>
                   isActive ? "text-blue-600 border-b-2 border-blue-600" : ""
                 }
               >
-                MyListings
+                About Us
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="/dashboard"
-                className={({ isActive }) =>
-                  isActive ? "text-blue-600 border-b-2 border-blue-600" : ""
-                }
-              >
-               Dashboard
-              </NavLink>
-            </li>
+          
+           
           </ul>
-        </div>
+        </div>)
+       }
         <div className="navbar-end md:mr-3   space-x-0.5 md:space-x-2">
           <button onClick={toggleTheme}>
             {theme === "light" ? (
@@ -196,7 +243,7 @@ console.log(user)
             <div className=" ">
               <Link
                 to="/auth/login"
-                className=" md:font-bold md:py-5 md:text-xl -ml-10   font-light  py-1 px-3 text-sm  hover:text-[#3d92e7ef]"
+                className=" md:font-bold md:py-5 md:text-xl   font-light  py-1 px-3 text-sm  hover:text-[#3d92e7ef]"
               >
                 Login
               </Link>

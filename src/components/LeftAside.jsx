@@ -1,8 +1,9 @@
 import React from "react";
 import { FaHome, FaThList } from "react-icons/fa";
+import { ImProfile } from "react-icons/im";
 import {
   MdAddBox,
-  MdOutlineListAlt,
+ 
   MdOutlineSpaceDashboard,
 } from "react-icons/md";
 import { NavLink } from "react-router";
@@ -17,14 +18,14 @@ const LeftAside = () => {
         <div className="flex mx-auto justify-center items-center space-x-1">
           <div className="avatar">
             <div className="w-10 md:mr-0 mr-10 lg:w-15 rounded">
-              <img src="https://i.ibb.co/35dHDb5j/png-clipart-running-people-running-london-marathon-the-color-run-sport-others-miscellaneous-running.png" />
+              <img src="https://i.ibb.co/q3NJtxch/200ef352347115-590d3a6c4f601.png" />
             </div>
           </div>
 
           <div>
             <a className=" md:text-2xl NVtext-color -ml-10 md:ml-0 lg:text-2xl font-bold ">
               {" "}
-              MarathonHub{" "}
+              FindMates{" "}
             </a>
           </div>
         </div>
@@ -58,7 +59,7 @@ const LeftAside = () => {
         </div>
         <div className="mt-3  w-[90%] mx-auto   rounded py-3 px-4">
           <NavLink
-            to="/dashboard/addMarathons"
+            to="/dashboard/addPost"
             className={({ isActive }) =>
               isActive
                 ? " bg-white text-blue-500 p-3 rounded flex items-center gap-1 font-bold"
@@ -66,12 +67,12 @@ const LeftAside = () => {
             }
           >
             <MdAddBox size={25} />
-            Add Marathon
+            Add Post
           </NavLink>
         </div>
         <div className="mt-3  w-[90%] mx-auto   rounded py-3 px-4">
           <NavLink
-            to="/dashboard/myMarathonsList"
+            to="/dashboard/MyPosts"
             className={({ isActive }) =>
               isActive
                 ? " bg-white text-blue-500 p-3 rounded flex items-center gap-1 font-bold"
@@ -79,20 +80,20 @@ const LeftAside = () => {
             }
           >
             <FaThList />
-            My Marathon List
+            My Posts
           </NavLink>
         </div>
         <div className="mt-3  w-[90%] mx-auto   rounded py-3 px-4">
           <NavLink
-            to="/dashboard/myApplications"
+            to="/dashboard/MyProfile"
             className={({ isActive }) =>
               isActive
                 ? " bg-white text-blue-500 p-3 rounded flex items-center gap-1 font-bold"
                 : "flex  items-center gap-1 font-bold "
             }
           >
-            <MdOutlineListAlt />
-            My Apply List
+            <ImProfile />
+            My Profile
           </NavLink>
         </div>
       </div>
